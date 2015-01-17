@@ -1,0 +1,97 @@
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:78%; }
+
+#legend {
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	width:22%;
+	-webkit-box-shadow: -3px 0px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: -3px 0px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: -3px 0px 10px 0px rgba(0,0,0,0.5);
+	font-family: sans-serif;
+	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	overflow:auto;
+}
+
+.legend-header {
+	padding: 0 20px;
+	color:#333;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #eee;
+}
+
+.legend-body {
+
+}
+
+.legend-title {
+	margin-top: 0;
+    padding-top: 20px;
+    font-size: 1.5em;
+}
+
+.legend-section-title {
+	padding: 0 20px;
+	margin-top: 0;
+    padding-top: 20px;
+	color: #747474;
+	font-size:1em;
+}
+
+.key-item-list {
+	padding:0px 20px;
+}
+
+.legend-body li {
+	position: relative;
+	list-style: none;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    display:list-item;
+}
+
+.legend-body li .key-item-map {
+	position:relative;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing:border-box;
+    background-color: #ccc;
+}
+
+.legend-body li .key-item-zoom-to {
+    background-image: url('zoom_to.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:none;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: #f1f2f3;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.legend-body li:hover .key-item-zoom-to{
+	display:block;
+}
+
+.key-item-name {
+	margin: 0;
+	padding: 5px;
+	font-size: 0.9em;
+}
