@@ -1,5 +1,5 @@
 var Ajax = function(options){
-	console.log('ok, got a query for ' + options.url);
+	//console.log('ok, got a query for ' + options.url);
 	var request = new XMLHttpRequest();
 	var url = options.url;
 	var successCb = options.success;
@@ -9,12 +9,12 @@ var Ajax = function(options){
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
-	    console.log('Success!')
+	    //console.log('Success!')
 	    var data = JSON.parse(request.responseText);
 	    console.log(data);
 	    successCb(data);
 	  } else {
-	    console.log('We reached our target server, but it returned an error');
+	    //console.log('We reached our target server, but it returned an error');
 	    failCb(request.status);
 	  }
 	};
@@ -56,5 +56,3 @@ var newEl = function (tagName, className, container) {
 
 	return el;
 }
-
-
