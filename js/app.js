@@ -9,6 +9,12 @@ var streetmap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/
 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }).addTo(map)
 
+//Darkmatter base layer
+var darkStreetmap = 
+L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
+attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+})
+
 //Imagery base layer
 var mapquestPhoto = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg", {
 maxZoom: 18,
@@ -139,6 +145,7 @@ Ajax({
 
 var basemaps = {
 	"Street Map":streetmap,
+  	"Darkmatter":darkStreetmap,
 	"Aerial Photo":mapquestPhoto,
 	"Aerial Photo with Streets":mapquestPhotoLabel
 }
@@ -150,6 +157,3 @@ var overlays = {
 };
 
 L.control.layers(basemaps, overlays).addTo(map);
-
-
-
